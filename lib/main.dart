@@ -26,6 +26,7 @@ class Main extends StatelessWidget{
           foregroundColor: Colors.black
         ),
         inputDecorationTheme: InputDecorationTheme(
+          labelStyle: TextStyle(fontWeight: FontWeight.bold),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10)
           ),

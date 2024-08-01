@@ -152,15 +152,37 @@ class _TaskState extends State<Task> {
                   TextButton(
                     child: Text('Add to Task', style: TextStyle(fontWeight: FontWeight.bold)),
                     onPressed: () {
-                      setState(() {
-                        datas.add({
-                          "title": ct.text,
-                          "content": ct2.text,
+                      if(ct.text=="" && ct2.text==""){
+                        showDialog<void>(
+                          context: context,
+                          builder: (BuildContext dialogContext) {
+                            return AlertDialog(
+                              title: Text('Error!',style: TextStyle(fontWeight: FontWeight.bold),),
+                              content: Text('Please enter Both of them'),
+                              actions: <Widget>[
+                                TextButton(
+                                  child: Text('Try again'),
+                                  onPressed: () {
+                                    Navigator.of(dialogContext)
+                                        .pop(); // Dismiss alert dialog
+                                  },
+                                ),
+                              ],
+                            );
+                          },
+                        );
+                      }
+                      else{
+                        setState(() {
+                          datas.add({
+                            "title": ct.text,
+                            "content": ct2.text,
+                          });
                         });
-                      });
-                      Navigator.of(dialogContext).pop();
-                      ct.clear();
-                      ct2.clear();
+                        Navigator.of(dialogContext).pop();
+                        ct.clear();
+                        ct2.clear();
+                      }
                     },
                   ),
                   TextButton(
