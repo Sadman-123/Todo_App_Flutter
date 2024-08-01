@@ -17,6 +17,7 @@ class Main extends StatelessWidget{
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.amber,
           elevation: 4,
+          centerTitle: true,
           shadowColor:Colors.black,
           titleTextStyle: TextStyle(color:Colors.black,fontSize: 27,fontWeight: FontWeight.bold),
         ),
@@ -49,6 +50,7 @@ class Main extends StatelessWidget{
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.blue,
           elevation: 4,
+          centerTitle: true,
           shadowColor:Colors.grey,
           titleTextStyle: TextStyle(color:Colors.black,fontSize: 27,fontWeight: FontWeight.bold),
         ),
