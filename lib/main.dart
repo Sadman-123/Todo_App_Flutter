@@ -42,6 +42,10 @@ class Main extends StatelessWidget{
             foregroundColor: MaterialStateProperty.all(Colors.black)
           )
         ),
+        snackBarTheme: SnackBarThemeData(
+          backgroundColor: Colors.amber,
+          contentTextStyle: TextStyle(color: Colors.black)
+        )
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
@@ -74,9 +78,13 @@ class Main extends StatelessWidget{
                   backgroundColor: MaterialStateProperty.all(Colors.blue),
                   foregroundColor: MaterialStateProperty.all(Colors.black)
               )
+          ),
+          snackBarTheme: SnackBarThemeData(
+              backgroundColor: Colors.blue,
+              contentTextStyle: TextStyle(color: Colors.white)
           )
       ),
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.dark,
       home: Task(),
     );
   }

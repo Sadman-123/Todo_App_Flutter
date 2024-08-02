@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
+import 'package:animated_snack_bar/animated_snack_bar.dart';
 class Task extends StatefulWidget {
   @override
   State<Task> createState() => _TaskState();
@@ -179,6 +180,11 @@ class _TaskState extends State<Task> {
                             "content": ct2.text,
                           });
                         });
+                        final stk=SnackBar(
+                            content: Text("Added Successfully!"),
+
+                        );
+                        ScaffoldMessenger.of(context).showSnackBar(stk);
                         Navigator.of(dialogContext).pop();
                         ct.clear();
                         ct2.clear();
