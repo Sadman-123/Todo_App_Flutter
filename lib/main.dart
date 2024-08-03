@@ -84,7 +84,7 @@ class Main extends StatelessWidget{
               contentTextStyle: TextStyle(color: Colors.white)
           )
       ),
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.system,
       home: Task(),
     );
   }
